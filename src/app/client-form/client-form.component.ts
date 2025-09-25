@@ -8,7 +8,7 @@ import { Client } from '../clientClass';
 })
 export class ClientFormComponent {
 
-  clients : Client[]=[];
+  //clients : Client[]=[];
 
   addClient (){
     
