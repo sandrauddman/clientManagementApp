@@ -1,6 +1,7 @@
 
 export class Client{
-    name: string;
+   
+    cname: string;
     email: string;
     password: string;
 }

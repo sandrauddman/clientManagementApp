@@ -1,24 +1,46 @@
 <div class="container">
     <h5 style="background-color: rgba(177, 248, 224, 0.614);">Add a client</h5>
-    <form action="submitt">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Jane Doe">
+            <label  class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="cname" id="name" placeholder="Jane Doe">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="emailId" id="email" placeholder="jane.doe@example.com">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="...">
+            <label  class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="pass" id="password" placeholder="...">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Re-enter Password</label>
-            <input type="password" class="form-control" id="Repassword" placeholder="...">
+            <label  class="form-label">Re-enter Password</label>
+            <input type="password" class="form-control" formControlName="repass" id="Repassword" placeholder="...">
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" class="btn btn-primary" >Register</button>
     </form>
 
 
+</div>
+
+<div class="container">
+    <h3>Client list</h3>
+    <table class="table table-success">
+        <thead>
+            <tr>
+            <th>Name</th><th>Email</th><th>del</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of clients; let i= index">
+                <td>{{c.cname}}</td>
+                <td>{{c.emailId}}</td>
+                <button class="btn btn-danger" (click)="deleteclient(i)">del</button>
+                
+            </tr>
+        </tbody>
+    </table>
+    
+ 
+    
 </div>

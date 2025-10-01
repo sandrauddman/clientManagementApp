@@ -1,0 +1,47 @@
+{
+  "clients": [
+    {
+      "id": "2728",
+      "cname": "Olov Hammarström",
+      "emailId": "olov.hammarstrom@example.com",
+      "pass": "123456",
+      "repass": "12345"
+    },
+    {
+      "id": "54e6",
+      "cname": "Peter johnsson",
+      "emailId": "pjhnsson@example.com",
+      "pass": "23456789",
+      "repass": "2345678"
+    },
+    {
+      "id": "9e85",
+      "cname": "Sandra Uddman",
+      "emailId": "Sandra.uddman@gmail.com",
+      "pass": "wertyui",
+      "repass": "rdetfui"
+    },
+    {
+      "id": "c24e",
+      "cname": "",
+      "emailId": "",
+      "pass": "",
+      "repass": ""
+    },
+    {
+      "id": "eed3",
+      "cname": "Holger Helm",
+      "emailId": "hhelm@example.com",
+      "pass": "2345678",
+      "repass": "34567"
+    },
+    {
+      "id": "aa5b",
+      "cname": "Sandra Uddman",
+      "emailId": "",
+      "pass": "",
+      "repass": ""
+    }
+  ],
+  "meetings": []
+}

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Client } from './clientClass';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 
 
@@ -18,18 +20,18 @@ addClient(client : any): Observable<any>{
 
 }
 
-getAllClients():Observable<any>{
-  return this.http.get<any>(this.url);
+getAllClients():Observable<any[]>{
+  return this.http.get<any[]>(this.url);
 }
 
-getClient(index: number): Observable<any>{
-  return this.http.get<any>(`${this.url}/${index}`);
+getClient(index: number): Observable<Client>{
+  return this.http.get<Client>(`${this.url}/${index}`);
 }
 deleteClient(index: number): Observable<any> {
  return this.http.delete<any>(`${this.url}/${index}`);
 }
-updateClient(client: any, index: number): Observable<any>{
-  return this.http.put<any>(`${this.url}/${index}`,client)
+updateClient(client: any, index: number): Observable<Client>{
+  return this.http.put<Client>(`${this.url}/${index}`,client)
 
 }
 
