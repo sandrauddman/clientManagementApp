@@ -27,8 +27,8 @@ getAllClients():Observable<any[]>{
 getClient(index: number): Observable<Client>{
   return this.http.get<Client>(`${this.url}/${index}`);
 }
-deleteClient(index: number): Observable<any> {
- return this.http.delete<any>(`${this.url}/${index}`);
+deleteClient(index: number): Observable<void> {
+ return this.http.delete<void>(`${this.url}/${index}`);
 }
 updateClient(client: any, index: number): Observable<Client>{
   return this.http.put<Client>(`${this.url}/${index}`,client)

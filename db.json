@@ -43,5 +43,13 @@
       "repass": ""
     }
   ],
-  "meetings": []
+  "meetings": [
+    {
+      "id": "7ee9",
+      "meetname": "stand up",
+      "clientId": "2728",
+      "date": "2025-10-03",
+      "time": "17:29"
+    }
+  ]
 }

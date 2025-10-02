@@ -1,1 +1,54 @@
-<p>meeting-form works!</p>
+<div class="container">
+    <h5 style="background-color: rgba(177, 248, 224, 0.614);">Scheduele a meeting</h5>
+    <form [formGroup]="meetingForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label class="form-label">Meeting subject</label>
+            <input type="text" class="form-control" formControlName="meetname" id="meeting"
+                placeholder="meeting subject">
+        </div>
+
+        <div class="mb-3">
+            <select id="clientSelect" formControlName="clientId">
+                <option [ngValue]="null">-- Select a client --</option>
+                <option *ngFor="let client of clients" [ngValue]="client.id">
+                    {{ client.cname }}
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="appointmentDate" class="form-label">Appointment Date</label>
+            <input id="appointmentDate" type="date" class="form-control" formControlName="date">
+        </div>
+
+        <div class="mb-3">
+            <label for="appointmentTime" class="form-label">Time</label>
+            <input id="appointmentTime" type="time" class="form-control" formControlName="time">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+
+    <div class="container" >
+        <h3>Meetings</h3>
+
+        <table class="table table-success">
+            <thead>
+                <tr>
+                    <th>Meeting subject</th><th>Client ID</th><th>Date</th><th>Time</th><th>del</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let m of meetings">
+                    <td>{{m.meetname}}</td>
+                    <td>{{m.clientId}}</td>
+                    <td>{{m.date}}</td>
+                    <td>{{m.time}}</td>
+                    <button class="btn btn-danger">del</button>
+
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
