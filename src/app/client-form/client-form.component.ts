@@ -32,7 +32,7 @@ export class ClientFormComponent implements OnInit{
   onSubmit(){
     this.addclient(this.registerForm.value);
     this.registerForm.reset();
-    this.loadclients();
+   
     
     return;
   }
@@ -52,6 +52,8 @@ export class ClientFormComponent implements OnInit{
 
 
   deleteclient(i: number){
+    console.log(" number" + i);
+    
     this.service.deleteClient(i).subscribe(()=>{this.loadclients();});
   }
   

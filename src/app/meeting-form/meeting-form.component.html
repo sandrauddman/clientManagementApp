@@ -31,7 +31,7 @@
 </div>
 
     <div class="container" >
-        <h3>Meetings</h3>
+        <h4>Meetings</h4>
 
         <table class="table table-success">
             <thead>
@@ -42,10 +42,10 @@
             <tbody>
                 <tr *ngFor="let m of meetings">
                     <td>{{m.meetname}}</td>
-                    <td>{{m.clientId}}</td>
+                    <td>{{clients[m.clientId.cname]}}</td>
                     <td>{{m.date}}</td>
                     <td>{{m.time}}</td>
-                    <button class="btn btn-danger">del</button>
+                    <button class="btn btn-danger" (click)="deletemeeting(m.id)">del</button>
 
                 </tr>
             </tbody>

@@ -1,55 +1,20 @@
 {
   "clients": [
     {
-      "id": "2728",
-      "cname": "Olov Hammarström",
-      "emailId": "olov.hammarstrom@example.com",
-      "pass": "123456",
-      "repass": "12345"
-    },
-    {
-      "id": "54e6",
-      "cname": "Peter johnsson",
-      "emailId": "pjhnsson@example.com",
-      "pass": "23456789",
-      "repass": "2345678"
-    },
-    {
-      "id": "9e85",
+      "id": "7009",
       "cname": "Sandra Uddman",
       "emailId": "Sandra.uddman@gmail.com",
-      "pass": "wertyui",
-      "repass": "rdetfui"
-    },
-    {
-      "id": "c24e",
-      "cname": "",
-      "emailId": "",
-      "pass": "",
-      "repass": ""
-    },
-    {
-      "id": "eed3",
-      "cname": "Holger Helm",
-      "emailId": "hhelm@example.com",
-      "pass": "2345678",
-      "repass": "34567"
-    },
-    {
-      "id": "aa5b",
-      "cname": "Sandra Uddman",
-      "emailId": "",
-      "pass": "",
-      "repass": ""
+      "pass": "3456789",
+      "repass": "456789"
     }
   ],
   "meetings": [
     {
-      "id": "7ee9",
-      "meetname": "stand up",
-      "clientId": "2728",
-      "date": "2025-10-03",
-      "time": "17:29"
+      "id": "6ec1",
+      "meetname": "HR intro",
+      "clientId": "7009",
+      "date": "2025-10-04",
+      "time": "15:15"
     }
   ]
 }

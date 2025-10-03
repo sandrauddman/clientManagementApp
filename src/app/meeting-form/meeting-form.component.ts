@@ -57,7 +57,7 @@ export class MeetingFormComponent implements OnInit{
     }
   
   
-    deleteclient(i: number){
+    deletemeeting(i: number){
       this.service.deleteMeeting(i).subscribe(()=>{this.loadmeetings();});
     }
     
