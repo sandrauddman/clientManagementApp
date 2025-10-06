@@ -1,13 +1,13 @@
 <div class="container">
-    <h5 style="background-color: rgba(177, 248, 224, 0.614);">Scheduele a meeting</h5>
+    <h5 class="p-1" style="background-color: rgb(181, 214, 204);"> Scheduel meeting</h5>
     <form [formGroup]="meetingForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
             <label class="form-label">Meeting subject</label>
             <input type="text" class="form-control" formControlName="meetname" id="meeting"
-                placeholder="meeting subject">
+                placeholder="Enter subject..">
         </div>
-
         <div class="mb-3">
+            <label for="clientSelect" class="form-label">Select client</label><br>
             <select id="clientSelect" formControlName="clientId">
                 <option [ngValue]="null">-- Select a client --</option>
                 <option *ngFor="let client of clients" [ngValue]="client.id">
@@ -15,40 +15,42 @@
                 </option>
             </select>
         </div>
-
         <div class="mb-3">
-            <label for="appointmentDate" class="form-label">Appointment Date</label>
-            <input id="appointmentDate" type="date" class="form-control" formControlName="date">
+            <label for="appointmentDate" class="form-label"> Date</label><br>
+            <input id="appointmentDate" type="date" class="form-control w-25" formControlName="date">
         </div>
-
         <div class="mb-3">
             <label for="appointmentTime" class="form-label">Time</label>
-            <input id="appointmentTime" type="time" class="form-control" formControlName="time">
+            <input id="appointmentTime" type="time" class="form-control w-25" formControlName="time">
         </div>
 
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
 </div>
 
-    <div class="container" >
-        <h4>Meetings</h4>
+<div class="mt-4 container">
+    <h4>Meetings</h4>
 
-        <table class="table table-success">
-            <thead>
-                <tr>
-                    <th>Meeting subject</th><th>Client ID</th><th>Date</th><th>Time</th><th>del</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let m of meetings">
-                    <td>{{m.meetname}}</td>
-                    <td>{{clients[m.clientId.cname]}}</td>
-                    <td>{{m.date}}</td>
-                    <td>{{m.time}}</td>
-                    <button class="btn btn-danger" (click)="deletemeeting(m.id)">del</button>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Meeting subject</th>
+                <th>Client name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of meetings">
+                <td>{{m.meetname}}</td>
+                <td>{{getClientName(m.clientId)}}</td>
+                <td>{{m.date}}</td>
+                <td>{{m.time}}</td>
+                <button class="btn btn-danger" (click)="deletemeeting(m.id)">delete</button>
 
-                </tr>
-            </tbody>
-        </table>
-        
-    </div>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
